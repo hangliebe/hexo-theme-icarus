@@ -89,6 +89,9 @@ module.exports = class extends Component {
                     </h1> : null}
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
+                    {/* wechat公众号信息 */}
+                    {!index ? <div> <br/><br/><div>关注<a href="https://weibo.com/u/3116633525" target="_blank">博客</a>或微信搜索公众号<strong>多媒体与图形</strong>，获取更多内容，欢迎在公众号留言交流！</div> 
+                    <div style="text-align: center"> <img src="https://gitee.com/hangliebe/resource/raw/master/webpimg/others/gongzhonghao.webp"  alt="扫一扫关注公众号" /> </div></div> : null}
                     {/* Licensing block */}
                     {!index && article && article.licenses && Object.keys(article.licenses)
                         ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
